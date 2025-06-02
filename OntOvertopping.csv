@@ -1,0 +1,14 @@
+Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
+OntOvertopping,TBox,https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
+OntOvertopping,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntOvertopping,TBox,OntOvertopping is an ontology developed for representing wave conditions and overtopping discharge in coastal and port environments.,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
+OntOvertopping,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
+Wave,Class,,,,,,One of a series of ridges that moves across the surface of a liquid (especially across a large body of water) [EN Wordnet],https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,Wave
+WaveCharacteristic,Class,,,,,,A prominent attribute of a wave.,https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,WaveCharacteristic
+CoastalDefenceStructure,Class,,,,,,"A structure built in coastal areas to protect entities such as ports, roads, railways, and their associated services from the impacts of waves, tides, and flooding.",https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,CoastalDefenceStructure
+WaveAttackAngle,Class,,,,,,The angle between the normal to the coastal or breakwater structure and the direction of the incident wave approach.,https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,WaveAttackAngle
+CrestWall,Class,,,,,,"A wall constructed landward of the crest, functioning as part of a breakwater structure.",https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,CrestWall
+hasCharacteristic,Object Property,,,Wave,WaveCharacteristic,,"Relates a wave to its associated WaveCharacteristic (e.g., height, period, direction).",https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,hasCharacteristic
+attacks,Object Property,,,Wave,CoastalDefenceStructure,,Relates a wave to the CoastalDefenceStructure that it impacts or overtops.,https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,attacks
+hasAttackAngle,Object Property,,,Wave,WaveAttackAngle,,"Relates a wave to the WaveAttackAngle, representing the angle it forms with the CrestWall.",https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,hasAttackAngle
+angleFormedAgainst,Object Property,,,WaveAttackAngle,CrestWall,,Relates the WaveAttackAngle to the CrestWall that serves as the reference structure for the angle measurement.,https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl,angleFormedAgainst
