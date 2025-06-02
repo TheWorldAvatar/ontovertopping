@@ -1,0 +1,26 @@
+% add \usepackage{seqsplit} to your preamble 
+\seqsplit{OntOvertopping:DerivedQuantity~{$\sqsubseteq$}~om:Quantity} \\
+\seqsplit{OntOvertopping:OvertoppingDischarge~{$\sqsubseteq$}~OntOvertopping:DerivedQuantity} \\
+\seqsplit{OntOvertopping:WaveAngle~{$\sqsubseteq$}~OntOvertopping:WaveCondition} \\
+\seqsplit{OntOvertopping:WaveCondition~{$\sqsubseteq$}~om:Quantity} \\
+\seqsplit{OntOvertopping:WaveDirection~{$\sqsubseteq$}~OntOvertopping:WaveCondition} \\
+\seqsplit{OntOvertopping:WaveHeight~{$\sqsubseteq$}~OntOvertopping:WaveCondition} \\
+\seqsplit{OntOvertopping:WavePeriod~{$\sqsubseteq$}~OntOvertopping:WaveCondition} \\
+\seqsplit{{$\exists$}~om:hasUnit.{$\top$}~{$\sqsubseteq$}~om:Measure} \\
+\seqsplit{{$\exists$}~om:hasValue.{$\top$}~{$\sqsubseteq$}~om:Quantity} \\
+\seqsplit{{$\exists$}~OntOvertopping:angleFormedAgainst.{$\top$}~{$\sqsubseteq$}~OntOvertopping:WaveAttackAngle} \\
+\seqsplit{{$\exists$}~OntOvertopping:attacks.{$\top$}~{$\sqsubseteq$}~OntOvertopping:Wave} \\
+\seqsplit{{$\exists$}~OntOvertopping:happensAt.{$\top$}~{$\sqsubseteq$}~OntOvertopping:OvertoppingDischarge} \\
+\seqsplit{{$\exists$}~OntOvertopping:hasAttackAngle.{$\top$}~{$\sqsubseteq$}~OntOvertopping:Wave} \\
+\seqsplit{{$\exists$}~OntOvertopping:hasPart.{$\top$}~{$\sqsubseteq$}~OntOvertopping:CoastalDefenceStructure} \\
+\seqsplit{{$\exists$}~OntOvertopping:hasWaveCondition.{$\top$}~{$\sqsubseteq$}~OntOvertopping:Wave} \\
+\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~om:hasUnit.om:Unit} \\
+\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~om:hasValue.om:Measure} \\
+\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntOvertopping:angleFormedAgainst.OntOvertopping:CrestWall} \\
+\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntOvertopping:attacks.OntOvertopping:CoastalDefenceStructure} \\
+\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntOvertopping:happensAt.OntOvertopping:CrestWall} \\
+\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntOvertopping:hasAttackAngle.OntOvertopping:WaveAttackAngle} \\
+\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntOvertopping:hasPart.OntOvertopping:CrestWall} \\
+\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntOvertopping:hasWaveCondition.OntOvertopping:WaveCondition} \\
+\seqsplit{{$\exists$}~om:hasNumericalValue.{$\top$}~{$\sqsubseteq$}~om:Measure} \\
+\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~om:hasNumericalValue.xsd:float} \\

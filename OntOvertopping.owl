@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#"
+     xml:base="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:OntOvertopping="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl">
+        <dc:date>02 June 2025</dc:date>
+        <rdfs:comment>OntOvertopping is an ontology developed for representing wave conditions and overtopping discharge in coastal and port environments.</rdfs:comment>
+        <owl:versionInfo>1</owl:versionInfo>
+        <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#gitCommitHash -->
+
+
+    <owl:AnnotationProperty rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#gitCommitHash"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit">
+        <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+        <rdfs:comment>An object property referring to the unit associated with a measured value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
+        <rdfs:label>hasUnit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue">
+        <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <rdfs:comment>An object property referring to the measured value of a quantity.</rdfs:comment>
+        <rdfs:label>hasValue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#angleFormedAgainst -->
+
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#angleFormedAgainst">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveAttackAngle"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#CrestWall"/>
+        <rdfs:comment>Relates the WaveAttackAngle to the CrestWall that serves as the reference structure for the angle measurement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>angleFormedAgainst</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#attacks -->
+
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#attacks">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#Wave"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#CoastalDefenceStructure"/>
+        <rdfs:comment>Relates a wave to the CoastalDefenceStructure that it impacts or overtops.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>attacks</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#happensAt -->
+
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#happensAt">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#OvertoppingDischarge"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#CrestWall"/>
+        <rdfs:comment>An object property relating an instance of OvertoppingDischarge to the physical structure, e.g., a breakwater or crest wall, where the overtopping event occurs.</rdfs:comment>
+        <rdfs:label>happensAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#hasAttackAngle -->
+
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#hasAttackAngle">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#Wave"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveAttackAngle"/>
+        <rdfs:comment>Relates a wave to the WaveAttackAngle, representing the angle it forms with the CrestWall.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>hasAttackAngle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#hasPart">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#CoastalDefenceStructure"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#CrestWall"/>
+        <rdfs:comment>An object property that relates a CoastalDefenceStructure to one of its structural components, such as a CrestWall.</rdfs:comment>
+        <rdfs:label>hasPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#hasWaveCondition -->
+
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#hasWaveCondition">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#Wave"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveCondition"/>
+        <rdfs:comment>Relates a wave to its associated WaveCondition (e.g., height, period, angle and direction).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>hasWaveCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue">
+        <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>The numerical value of a measured quantity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
+        <rdfs:label>hasNumericalValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Measure -->
+
+
+    <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity -->
+
+
+    <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Unit -->
+
+
+    <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#CoastalDefenceStructure -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#CoastalDefenceStructure">
+        <rdfs:comment>A structure built in coastal areas to protect entities such as ports, roads, railways, and their associated services from the impacts of waves, tides, and flooding.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>CoastalDefenceStructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#CrestWall -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#CrestWall">
+        <rdfs:comment>A wall constructed landward of the crest, functioning as part of a breakwater structure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>CrestWall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#DerivedQuantity -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#DerivedQuantity">
+        <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
+        <rdfs:comment>A quantity computed from a combination of other input parameters or measurements, rather than being directly observed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>DerivedQuantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#OvertoppingDischarge -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#OvertoppingDischarge">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#DerivedQuantity"/>
+        <rdfs:comment>A derived quantity indicating the volume of water per unit time that flows over a breakwater or crest wall due to wave action.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>OvertoppingDischarge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#Wave -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#Wave">
+        <rdfs:comment>One of a series of ridges that moves across the surface of a liquid (especially across a large body of water) [EN Wordnet]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>Wave</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveAngle -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveAngle">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveCondition"/>
+        <rdfs:comment>The angle between the incoming wave direction and a specific structure or shoreline orientation, usually measured relative to the normal (perpendicular) to that structure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>WaveAngle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveAttackAngle -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveAttackAngle">
+        <rdfs:comment>The angle between the normal to the coastal or breakwater structure and the direction of the incident wave approach.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>WaveAttackAngle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveCondition -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveCondition">
+        <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
+        <rdfs:comment>The characteristics of a wave, such as wave height, period, angle and direction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>WaveCondition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveDirection -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveDirection">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveCondition"/>
+        <rdfs:comment>The compass direction from which the waves are coming, typically measured in degrees clockwise from true north (0°–360°).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>WaveDirection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveHeight -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveHeight">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveCondition"/>
+        <rdfs:comment>The vertical distance between the crest (the highest point) and the trough (the lowest point) of a wave.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>WaveHeight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WavePeriod -->
+
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WavePeriod">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl#WaveCondition"/>
+        <rdfs:comment>The time interval between two successive wave crests passing a fixed point, such as a crest wall.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://raw.githubusercontent.com/TheWorldAvatar/ontovertopping/refs/heads/main/OntOvertopping.owl"/>
+        <rdfs:label>WavePeriod</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+
